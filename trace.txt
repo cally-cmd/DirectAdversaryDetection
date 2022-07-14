@@ -1,0 +1,123 @@
+starting capture
+Sniffed SYN Packet
+2022-07-13 15:25:53.274806
+Sniffed SYN ACK
+SRTT: 
+0:00:00.000098
+18.216.130.145
+Client Protocol Version
+Server Protocol Version
+PRTT:  0:00:00.038598
+Client Algorithm
+Server Algorithm
+ARTT:  0:00:00.033154
+Server KEX Reply
+2022-07-13 15:25:53.424124
+Client KEX Reply
+KRTT:  0:00:00.003419
+oops
+Error: 'Layer does not exist in packet'
+starting capture
+No attribute named ip
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Packet (Length: 180)
+Layer ETH:
+	Destination: 33:33:00:00:00:fb
+	Address: 33:33:00:00:00:fb
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...1 .... .... .... .... = IG bit: Group address (multicast/broadcast)
+	Source: 84:1b:77:2b:2a:fa
+	.... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Type: IPv6 (0x86dd)
+	Address: 84:1b:77:2b:2a:fa
+Layer IPV6:
+	0110 .... = Version: 6
+	.... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	.... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+	.... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	.... .... .... 1011 0101 0111 0110 1110 = Flow Label: 0xb576e
+	Payload Length: 126
+	Next Header: UDP (17)
+	Hop Limit: 255
+	Source Address: fe80::1f66:ef24:cf64:d3e9
+	Destination Address: ff02::fb
+Layer UDP:
+	Source Port: 5353
+	Destination Port: 5353
+	Length: 126
+	Checksum: 0xb0e7 [unverified]
+	Checksum Status: Unverified
+	Stream index: 0
+	Timestamps
+	Time since first frame: 0.000000000 seconds
+	Time since previous frame: 0.000000000 seconds
+	UDP payload (118 bytes)
+Layer MDNS:
+	Transaction ID: 0x0000
+	Flags: 0x0000 Standard query
+	0... .... .... .... = Response: Message is a query
+	.000 0... .... .... = Opcode: Standard query (0)
+	.... ..0. .... .... = Truncated: Message is not truncated
+	.... ...0 .... .... = Recursion desired: Don't do query recursively
+	.... .... .0.. .... = Z: reserved (0)
+	.... .... ...0 .... = Non-authenticated data: Unacceptable
+	Questions: 7
+	Answer RRs: 0
+	Authority RRs: 0
+	Additional RRs: 0
+	Queries
+	Name: _ftp._tcp.local
+	Name Length: 15
+	Label Count: 3
+	Type: PTR (domain name PoinTeR) (12)
+	.000 0000 0000 0001 = Class: IN (0x0001)
+	0... .... .... .... = "QU" question: False
+	_ftp._tcp.local: type PTR, class IN, "QM" question
+	_nfs._tcp.local: type PTR, class IN, "QM" question
+	_afpovertcp._tcp.local: type PTR, class IN, "QM" question
+	_smb._tcp.local: type PTR, class IN, "QM" question
+	_sftp-ssh._tcp.local: type PTR, class IN, "QM" question
+	_webdavs._tcp.local: type PTR, class IN, "QM" question
+	_webdav._tcp.local: type PTR, class IN, "QM" question
+	Name: _nfs._tcp.local
+	Name: _afpovertcp._tcp.local
+	Name: _smb._tcp.local
+	Name: _sftp-ssh._tcp.local
+	Name: _webdavs._tcp.local
+	Name: _webdav._tcp.local
+	Name Length: 15
+	Name Length: 22
+	Name Length: 15
+	Name Length: 20
+	Name Length: 19
+	Name Length: 18
+	Label Count: 3
+	Label Count: 3
+	Label Count: 3
+	Label Count: 3
+	Label Count: 3
+	Label Count: 3
+	Type: PTR (domain name PoinTeR) (12)
+	Type: PTR (domain name PoinTeR) (12)
+	Type: PTR (domain name PoinTeR) (12)
+	Type: PTR (domain name PoinTeR) (12)
+	Type: PTR (domain name PoinTeR) (12)
+	Type: PTR (domain name PoinTeR) (12)
+	.000 0000 0000 0001 = Class: IN (0x0001)
+	.000 0000 0000 0001 = Class: IN (0x0001)
+	.000 0000 0000 0001 = Class: IN (0x0001)
+	.000 0000 0000 0001 = Class: IN (0x0001)
+	.000 0000 0000 0001 = Class: IN (0x0001)
+	.000 0000 0000 0001 = Class: IN (0x0001)
+	0... .... .... .... = "QU" question: False
+	0... .... .... .... = "QU" question: False
+	0... .... .... .... = "QU" question: False
+	0... .... .... .... = "QU" question: False
+	0... .... .... .... = "QU" question: False
+	0... .... .... .... = "QU" question: False
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+oops
+Error: 'Layer does not exist in packet'
+starting capture

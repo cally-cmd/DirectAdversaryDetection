@@ -1,19 +1,28 @@
-import time
 import pyshark
+from scapy.all import *
+import sys
 
-def listen_on_interface(interface='wlp2s0', timeout=60):
-    """
-    :param interface: The name of the interface on which to capture traffic
-    :return: generator containing live packets
-    """
 
-    start = time.time()
-    capture = pyshark.LiveCapture(interface=interface)
+def main():
 
-    for item in capture.sniff_continuously():
-        if timeout and time.time() - start > timeout:
-            break
-        yield item 
+    filename = sys.argv[1]
 
-for pkt in listen_on_interface():
-    print(pkt)
+    count = 0
+
+    capture = pyshark.FileCapture(filename)
+
+    for pkt in capture:
+        for layer in pkt:
+            print('layer_name: \n', layer.layer_name)
+            if layer.layer_name == 'ssh':
+                print('layer: \n', layer)
+                for field in layer.field_names:
+                    print('field: ', field)
+                    print(layer.get(field))
+                count += 1
+            
+            if count == 25:
+                return
+
+
+main()

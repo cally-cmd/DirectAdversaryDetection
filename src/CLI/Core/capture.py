@@ -2,12 +2,12 @@ import sys
 sys.path.append("src/CLI/Core")
 import pyshark as ps
 from pyshark.capture.file_capture import FileCapture
-from Packet import Packet
+from packet import Packet
 
 class Capture(FileCapture):
 
     def __init__(self, filename):
-        super().__init__(filename)
+        super(Capture, self).__init__(filename, keep_packets=False)
         self.tcp = []
         self.ip = []
         self.pair = []
@@ -15,15 +15,22 @@ class Capture(FileCapture):
 
     def packet_wrapper(self):
 
-        self.packets = [Packet(packet) for packet in self]
+        print(len(self))
+
+        self.packets = [Packet(pkt) for pkt in super(Capture, self).__iter__()]
+
+        print(super(Capture, self).__repr__())
+        print(len(self.packets))
+
+        # assert len(self.packets) == int(super(Capture, self).__repr__().split()[-1])
     
     def extract_tcp(self):
 
-        self.tcp = [layer for packet in self for layer in packet if layer.layer_name == 'tcp']
+        self.tcp = [layer for packet in self.packets for layer in packet.get_layers() if layer.layer_name == 'tcp']
 
     def extract_ip(self):
 
-        self.ip = [layer for packet in self for layer in packet if layer.layer_name == 'ip']
+        self.ip = [layer for packet in self.packets for layer in packet.get_layers() if layer.layer_name == 'ip']
 
     def extract(self):
 
@@ -44,4 +51,6 @@ class Capture(FileCapture):
     def packet_count(self):
         return len(self.packets)
 
+    def __iter__(self):
+        return iter(self.packets)
     
