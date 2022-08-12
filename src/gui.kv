@@ -1,0 +1,214 @@
+<MyGrid>
+
+    ip1: ip1
+    ip2: ip2
+    ip3: ip3
+    ip4: ip4
+    ip5: ip5
+
+    r_p1: r_p1
+    r_a1: r_a1
+    r_k1: r_k1
+
+    r_p2: r_p2
+    r_a2: r_a2
+    r_k2: r_k2
+
+    r_p3: r_p3
+    r_a3: r_a3
+    r_k3: r_k3
+
+    r_p4: r_p4
+    r_a4: r_a4
+    r_k4: r_k4
+
+    r_p5: r_p5
+    r_a5: r_a5
+    r_k5: r_k5
+
+    decision1: decision1
+    decision2: decision2
+    decision3: decision3
+    decision4: decision4
+    decision5: decision5
+
+    GridLayout:
+        cols:1
+        spacing: 10
+        padding: 15
+        size: root.width, root.height
+
+        GridLayout:
+            cols:5
+            size: root.width - 200, root.height - 200
+            pos: 50, 100
+            spacing: 10
+            padding: 15
+
+            Label:
+                text: "IP: "
+                font_size: 35
+                bold: True
+                color: '#91646e'
+                background_normal: ''
+                background_color: 1, .3, .4, .85
+
+            Label:
+                text: "R_P: "
+                font_size: 35
+                bold: True
+                color: '#91646e'
+                background_normal: ''
+                background_color: 1, .3, .4, .85
+
+            Label:
+                text: "R_A: "
+                font_size: 35
+                bold: True
+                color: '#91646e'
+                background_normal: ''
+                background_color: 1, .3, .4, .85
+
+            Label:
+                text: "R_K: "
+                font_size: 35
+                bold: True
+                color: '#91646e'
+                background_normal: ''
+                background_color: 1, .3, .4, .85
+
+            Label:
+                text: "Decision: "
+                font_size: 35
+                bold: True
+                color: '#91646e'
+                background_normal: ''
+                background_color: 1, .3, .4, .85
+
+            TextInput:
+                id: ip1
+                multiline:False
+                disabled: True
+
+            TextInput:
+                id: r_p1
+                multiline:False
+                disabled: True
+
+            TextInput:
+                id: r_a1
+                multiline:False
+                disabled: True
+
+            TextInput:
+                id: r_k1
+                multiline:False
+                disabled: True
+
+            TextInput:
+                id: decision1
+                multiline:False
+                disabled: True
+
+            TextInput:
+                id: ip2
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: r_p2
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: r_a2
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: r_k2
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: decision2
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: ip3
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: r_p3
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: r_a3
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: r_k3
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: decision3
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: ip4
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: r_p4
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: r_a4
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: r_k4
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: decision4
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: ip5
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: r_p5
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: r_a5
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: r_k5
+                multiline:False
+                disabled:True
+
+            TextInput:
+                id: decision5
+                multiline:False
+                disabled:True
+        Button:
+            on_press: app.close_app()
+            text: 'Exit'
